@@ -1,0 +1,29 @@
+├── app/                              # 🌐 Next.js App Router (UI Pages & Layouts)
+│   ├── layout.tsx                    # Global Root Layout (Injects Providers)
+│   ├── page.tsx                      # Landing / Home Page
+│   ├── login/
+│   │   └── page.tsx                  # Login UI Component
+│   ├── products/
+│   │   └── page.tsx                  # Catalog Listing Marketplace UI
+│   └── dashboard/
+│       └── page.tsx                  # Protected Seller/Buyer Dashboard UI
+│
+├── components/                       # 🧱 Reusable UI Components
+│   └── StoreProvider.tsx             # Redux & Auth Initializer Wrapper
+│
+├── redux/                            # 🧠 State Management & Network Layer
+│   ├── store.ts                      # Core Redux Store Configuration
+│   ├── hooks.ts                      # Custom Typed React-Redux Hooks (TS)
+│   ├── types.ts                      # Universal TypeScript Interfaces / Models
+│   │
+│   ├── slices/                       # 📂 Client-Only Synchronous Slices
+│   │   └── authSlice.ts              # Syncs Auth State across UI Components
+│   │
+│   └── services/                     # 🌐 RTK Query - Server Cache / Network Layer
+│       ├── baseApi.ts                # Main API Config (Base URL, Global Errors)
+│       ├── authApi.ts                # Sign In, Sign Up & Session Endpoints
+│       └── catalogApi.ts             # Products, Categories & Locations Endpoints
+│
+├── package.json
+├── tsconfig.json
+└── next.config.js
